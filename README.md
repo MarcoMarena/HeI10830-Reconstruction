@@ -148,7 +148,7 @@ Astrophysical Journal, 984(2), Article 99. https://doi.org/10.3847/1538-4357/adc
 
 ⸻
 
-📝 License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 
 This project is licensed under the MIT License. See LICENSE.
 
