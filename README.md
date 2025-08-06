@@ -50,7 +50,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 
 1. Clone this repo:  
    ```bash
-   git clone https://github.com/MarenaMarco/HeI10830-from-Ha.git
+   git clone https://github.com/MarcoMarena/HeI10830-from-Ha.git
    cd HeI10830-from-Ha
 
 2.	Create a conda environment and install dependencies:
