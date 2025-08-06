@@ -31,6 +31,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 ├── README.md                   # this file
 ├── LICENSE                     # project license
 ├── requirements.txt            # Python dependencies
+├── environment.yml             # Conda dependencies
 ├── checkpoints/                # saved model checkpoints
 ├── data/                       # raw & processed data (Hα/He I images)
 ├── datasets/                   # dataset configs & splits
