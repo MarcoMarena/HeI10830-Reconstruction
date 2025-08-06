@@ -16,7 +16,7 @@ He I 10830 Å is a key diagnostic of the solar chromosphere and corona, but hist
 - **Active regions:** CC = 0.903  
 - **Nonpolar filaments:** CC = 0.844  
 - **Polar-crown filaments:** CC = 0.871  
-- **Coronal holes:** CC = 0.536  [oai_citation:2‡researchwith.njit.edu](https://researchwith.njit.edu/en/publications/reconstructing-he-i-10830-%C3%A5-images-using-h%CE%B1-images-through-deep-l?utm_source=chatgpt.com)
+- **Coronal holes:** CC = 0.536
 
 The model also generalizes across observatories and reconstructs early-2000s X-class flare events in He I 10830 Å  [oai_citation:3‡researchwith.njit.edu](https://researchwith.njit.edu/en/publications/reconstructing-he-i-10830-%C3%A5-images-using-h%CE%B1-images-through-deep-l?utm_source=chatgpt.com).
 
