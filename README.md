@@ -24,24 +24,22 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 
 ## 📂 Repository Layout
 
-.
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── data
-│   ├── sample          # small set for quick demo
-│   │   ├── Ha/         # raw Hα inputs
-│   │   ├── HeI_gt/     # ground-truth He I 10830 Å
-│   │   └── HeI_syn/    # our synthetic outputs
-│   └── full_dataset/   # (not stored here; see Data section)
-├── src
-│   ├── preprocess.py   # image cropping, resizing, normalization
-│   ├── train.py        # pix2pixHD training loop
-│   └── infer.py        # run inference on new images
-├── models              # saved checkpoints
-└── .github
-└── workflows
-└── ci.yml      # optional: tests / linting / demo build
+├── README.md                   # this file
+├── LICENSE                     # project license
+├── requirements.txt            # Python dependencies
+├── checkpoints/                # saved model checkpoints
+├── data/                       # raw & processed data (Hα/He I images)
+├── datasets/                   # dataset configs & splits
+├── models/                     # pretrained models & training logs
+├── options/                    # training/inference configuration files
+├── results/                    # synthetic outputs & example galleries
+├── scripts/                    # helper and processing scripts
+├── util/                       # utility modules
+├── Boxes_cc_transformed.py     # bounding‐box transformation script
+├── Ha2He_accuracy.py           # accuracy evaluation script
+├── run_engine.py               # main training/inference orchestrator
+├── train.py                    # entry point for model training
+└── test.py                     # entry point for model evaluation
 
 ---
 
