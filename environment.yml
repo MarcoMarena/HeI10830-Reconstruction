@@ -1,4 +1,4 @@
-name: /project/bs644/mm243/conda_env/pix2pixhd
+name: heli10830
 channels:
   - conda-forge
   - defaults
@@ -21,4 +21,3 @@ dependencies:
   - jupyterlab
   - notebook
   - conda-forge::pandas
-prefix: /project/bs644/mm243/conda_env/pix2pixhd
