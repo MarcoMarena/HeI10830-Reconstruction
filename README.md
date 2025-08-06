@@ -54,12 +54,14 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
    ```bash
    git clone https://github.com/MarcoMarena/HeI10830-from-Ha.git
    cd HeI10830-from-Ha
+   ```
 
 2.	Create a conda environment and install dependencies:
-
-conda create -n heli10830 python=3.9
-conda activate heli10830
-pip install -r requirements.txt
+   ```
+    conda create -n heli10830 python=3.9
+    conda activate heli10830
+    pip install -r requirements.txt
+   ```
 
 
 3.	(Optional) Build Docker image:
@@ -71,12 +73,14 @@ docker build -t heli10830-demo .
 ⸻
 
 📊 Data
+```
 	•	Sample data is in data/sample/ (already tracked with Git LFS).
 	•	Full dataset (~10 GB) of NSO/SOLIS He I 10830 Å and NSO/GONG Hα is hosted on Zenodo or via FTP—see below.
 	•	How to add your own:
 	1.	Place raw Hα .fits or .png in data/full_dataset/Ha/.
 	2.	Place corresponding He I 10830 Å in data/full_dataset/HeI_gt/.
 	3.	Run python src/preprocess.py --in_dir data/full_dataset/Ha --out_dir data/processed/Ha.
+```
 
 Tip: keep a small “sample” subset in-repo for quick demos; store the full archive externally (Zenodo, Figshare) and link to it here.
 
@@ -84,37 +88,41 @@ Tip: keep a small “sample” subset in-repo for quick demos; store the full ar
 
 ⚙️ Preprocessing
 
+```
 python src/preprocess.py \
   --input_dir data/full_dataset/Ha \
   --output_dir data/processed/Ha \
   --crop 1024 1024 \
   --normalize
+```
 
 This script will:
+```
 	•	Crop/pad images to 1024×1024
 	•	Normalize pixel values to [–1, 1]
 	•	Split into train/val/test
+```
 
 ⸻
 
 🎛 Model Training & Inference
 
 Training
-
+```
 python src/train.py \
   --data_root data/processed \
   --name HeI10830_pix2pixHD \
   --model pix2pixHD \
   --niter 100 \
   --niter_decay 100
-
+```
 Inference
-
-python src/infer.py \
+```
+python src/test.py \
   --checkpoint_dir checkpoints/HeI10830_pix2pixHD \
   --input_dir data/processed/Ha/test \
   --output_dir results/HeI_syn
-
+```
 
 ⸻
 
@@ -130,7 +138,7 @@ See more examples in results/ or GitHub Pages gallery.
 📑 Citation
 
 If you use this code, please cite:
-
+```
 Marena, M., Li, Q., Wang, H., & Shen, B. (2025). Reconstructing He I 10830 Å Images Using Hα Images through Deep Learning.
 Astrophysical Journal, 984(2), Article 99. https://doi.org/10.3847/1538-4357/adc7fc  ￼ ￼
 
@@ -144,7 +152,7 @@ Astrophysical Journal, 984(2), Article 99. https://doi.org/10.3847/1538-4357/adc
   year = {2025},
   doi = {10.3847/1538-4357/adc7fc}
 }
-
+```
 
 ⸻
 
@@ -155,14 +163,17 @@ This project is licensed under the MIT License. See LICENSE.
 ⸻
 
 🤝 Acknowledgements
+```
 	•	NSO/SOLIS & NSO/GONG for data provision
 	•	NVIDIA’s pix2pixHD framework
 	•	Astrophysical Journal
-
+```
 ⸻
 
 Next Steps & Tips
+```
 	1.	Continuous Integration: Add a GitHub Action to run a quick inference on the sample dataset and verify outputs.
 	2.	Docker / Binder: Provide a one-click launch via Binder or Docker Hub for users to try the demo.
 	3.	Git LFS: Track only the small sample set; link to the full archive externally.
 	4.	Documentation Pages: Use GitHub Pages to host a static gallery of results and usage tutorials.
+```
