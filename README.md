@@ -56,7 +56,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
    cd HeI10830-from-Ha
    ```
 
-2.	Create a conda environment and install dependencies:
+2. Create a conda environment and install dependencies:
    ```bash
     conda create -n heli10830 python=3.9
     conda activate heli10830
