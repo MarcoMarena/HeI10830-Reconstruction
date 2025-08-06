@@ -1,0 +1,24 @@
+name: /project/bs644/mm243/conda_env/pix2pixhd
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.7
+  - ca-certificates
+  - openssl
+  - numpy
+  - scipy
+  - opencv
+  - tqdm
+  - matplotlib
+  - certifi
+  - visdom
+  - dominate
+  - jupyterlab
+  - notebook
+  - conda-forge::pandas
+prefix: /project/bs644/mm243/conda_env/pix2pixhd
