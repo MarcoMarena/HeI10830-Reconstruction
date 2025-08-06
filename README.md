@@ -24,6 +24,8 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 
 ## 📂 Repository Layout
 
+```
+.
 ├── README.md                   # this file
 ├── LICENSE                     # project license
 ├── requirements.txt            # Python dependencies
@@ -40,6 +42,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 ├── run_engine.py               # main training/inference orchestrator
 ├── train.py                    # entry point for model training
 └── test.py                     # entry point for model evaluation
+```
 
 ---
 
