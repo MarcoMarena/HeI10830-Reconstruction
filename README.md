@@ -57,16 +57,11 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
    ```
 
 2.	Create a conda environment and install dependencies:
-   ```
+   ```bash
     conda create -n heli10830 python=3.9
     conda activate heli10830
     pip install -r requirements.txt
    ```
-
-
-3.	(Optional) Build Docker image:
-
-docker build -t heli10830-demo .
 
 
 
@@ -82,33 +77,29 @@ docker build -t heli10830-demo .
 	3.	Run python src/preprocess.py --in_dir data/full_dataset/Ha --out_dir data/processed/Ha.
 ```
 
-Tip: keep a small “sample” subset in-repo for quick demos; store the full archive externally (Zenodo, Figshare) and link to it here.
-
 ⸻
 
 ⚙️ Preprocessing
 
-```
+```bash
 python src/preprocess.py \
   --input_dir data/full_dataset/Ha \
   --output_dir data/processed/Ha \
-  --crop 1024 1024 \
+  --crop 1792 1792 \
   --normalize
 ```
 
 This script will:
-```
 	•	Crop/pad images to 1024×1024
 	•	Normalize pixel values to [–1, 1]
 	•	Split into train/val/test
-```
 
 ⸻
 
 🎛 Model Training & Inference
 
 Training
-```
+```bash
 python src/train.py \
   --data_root data/processed \
   --name HeI10830_pix2pixHD \
@@ -117,7 +108,7 @@ python src/train.py \
   --niter_decay 100
 ```
 Inference
-```
+```bash
 python src/test.py \
   --checkpoint_dir checkpoints/HeI10830_pix2pixHD \
   --input_dir data/processed/Ha/test \
@@ -138,10 +129,11 @@ See more examples in results/ or GitHub Pages gallery.
 📑 Citation
 
 If you use this code, please cite:
-```
+```bash
 Marena, M., Li, Q., Wang, H., & Shen, B. (2025). Reconstructing He I 10830 Å Images Using Hα Images through Deep Learning.
 Astrophysical Journal, 984(2), Article 99. https://doi.org/10.3847/1538-4357/adc7fc  ￼ ￼
-
+```
+```bash
 @article{Marena2025HeI10830,
   title = {Reconstructing He i 10830 {{\AA}} Images Using Hα Images through Deep Learning},
   author = {Marena, Marco and Li, Qin and Wang, Haimin and Shen, Bo},
@@ -163,11 +155,11 @@ This project is licensed under the MIT License. See LICENSE.
 ⸻
 
 🤝 Acknowledgements
-```
+
 	•	NSO/SOLIS & NSO/GONG for data provision
 	•	NVIDIA’s pix2pixHD framework
 	•	Astrophysical Journal
-```
+ 
 ⸻
 
 Next Steps & Tips
