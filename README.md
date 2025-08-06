@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # Reconstructing He I 10830 Å from Hα Using pix2pixHD
 
 [![DOI](https://img.shields.io/badge/doi-10.3847%2F1538--4357%2Fadc7fc-blue)](https://doi.org/10.3847/1538-4357/adc7fc)
