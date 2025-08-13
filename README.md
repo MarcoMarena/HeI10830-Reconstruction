@@ -58,11 +58,17 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
    ```
 
 2. Create a conda environment and install dependencies:
-   ```bash
+   ```bash conda
     conda env create -f environment.yml
     conda activate heli10830
    ```
 
+   ```bash pip
+   python3 -m venv .venv
+   source .venv/bin/activate   # or `.venv\Scripts\activate` on Windows
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
 
 ⸻
