@@ -75,44 +75,14 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 
 📊 Data
 ```
-	•	Sample data is in data/sample/ (already tracked with Git LFS).
-	•	Full dataset (~10 GB) of NSO/SOLIS He I 10830 Å and NSO/GONG Hα is hosted on Zenodo or via FTP—see below.
-	•	How to add your own:
-	1.	Place raw Hα .fits or .png in data/full_dataset/Ha/.
-	2.	Place corresponding He I 10830 Å in data/full_dataset/HeI_gt/.
-	3.	Run python src/preprocess.py --in_dir data/full_dataset/Ha --out_dir data/processed/Ha.
+• Sample data is in datasets/
+• Full dataset of NSO/SOLIS He I 10830 Å and NSO/GONG Hα is hosted on Zenodo: https://zenodo.org/records/16877477
 ```
 
 ⸻
 
-⚙️ Preprocessing
+🎛 Model Inference
 
-```bash
-python src/preprocess.py \
-  --input_dir data/full_dataset/Ha \
-  --output_dir data/processed/Ha \
-  --crop 1792 1792 \
-  --normalize
-```
-
-This script will:
-	•	Crop/pad images to 1024×1024
-	•	Normalize pixel values to [–1, 1]
-	•	Split into train/val/test
-
-⸻
-
-🎛 Model Training & Inference
-
-Training
-```bash
-python src/train.py \
-  --data_root data/processed \
-  --name HeI10830_pix2pixHD \
-  --model pix2pixHD \
-  --niter 100 \
-  --niter_decay 100
-```
 Inference
 ```bash
 python src/test.py \
