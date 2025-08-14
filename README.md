@@ -33,7 +33,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 ├── requirements.txt            # Python dependencies
 ├── environment.yml             # Conda dependencies
 ├── checkpoints/                # saved model checkpoints
-├── data/                       # raw & processed data (Hα/He I images)
+├── data/                       # data handling
 ├── datasets/                   # dataset configs & splits
 ├── models/                     # pretrained models & training logs
 ├── options/                    # training/inference configuration files
