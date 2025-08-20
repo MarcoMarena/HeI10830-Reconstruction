@@ -88,7 +88,7 @@ Inference
 python src/test.py \
   --checkpoint_dir checkpoints/HeI10830_pix2pixHD \ #download from https://zenodo.org/records/16913723
   --input_dir datasets/ \
-  --output_dir results/HeI10830_pix2pixHD
+  --output_dir results/
 ```
 
 ⸻
