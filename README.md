@@ -86,7 +86,7 @@ The model also generalizes across observatories and reconstructs early-2000s X-c
 Inference
 ```bash
 python src/test.py \
-  --checkpoint_dir checkpoints/HeI10830_pix2pixHD \
+  --checkpoint_dir checkpoints/HeI10830_pix2pixHD \ #download from https://zenodo.org/records/16913723
   --input_dir data/processed/Ha/test \
   --output_dir results/HeI_syn
 ```
